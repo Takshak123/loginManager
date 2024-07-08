@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        .card-container {
+            max-width: 500px;
+            margin: 50px auto;
+        }
+        .card-header {
+            background-color: #17a2b8;
+            color: #fff;
+            text-align: center;
+        }
+        .card-body {
+            padding: 30px;
+        }
+        .profile-item {
+            margin-bottom: 15px;
+        }
+        .profile-item label {
+            font-weight: bold;
+        }
+        .profile-item span {
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card card-container">
+        <div class="card-header">
+            <h2>User Profile</h2>
+        </div>
+        <div class="card-body">
+            <div class="profile-item">
+                <label><i class="fas fa-id-badge form-icon"></i> ID:</label>
+                <span th:text="${user.id}"></span>
+            </div>
+            <div class="profile-item">
+                <label><i class="fas fa-envelope form-icon"></i> Email:</label>
+                <span th:text="${user.email}"></span>
+            </div>
+            <div class="profile-item">
+                <label><i class="fas fa-user form-icon"></i> Username:</label>
+                <span th:text="${user.username}"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
